@@ -1,12 +1,15 @@
 {
   "name": "03-api-solid",
   "version": "1.0.0",
-  "description": "GymPass style app.",
+  "description": "GymPass style app",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
-    "build": "tsup src out-dir build"
+    "build": "tsup src out-dir build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "@rocketseat/eslint-config": "2.2.0",
     "@types/bcryptjs": "2.4.6",
     "@types/node": "22.10.1",
+    "@vitest/coverage-v8": "2.1.8",
     "eslint": "8.57.1",
     "globals": "15.13.0",
     "prettier": "^3.0.0-alpha.6",
@@ -30,6 +34,8 @@
     "tsup": "8.3.5",
     "tsx": "4.19.2",
     "typescript": "5.7.2",
-    "typescript-eslint": "8.17.0"
+    "typescript-eslint": "8.17.0",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "2.1.8"
   }
 }
