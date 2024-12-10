@@ -1,11 +1,11 @@
 import fastify from 'fastify'
-import { usersRoutes } from './http/routes/users'
 import { ZodError } from 'zod'
 import { env } from './env'
+import { appRoutes } from './http/routes'
 
 export const app = fastify()
 
-app.register(usersRoutes)
+app.register(appRoutes, { prefix: 'users' })
 
 app.setErrorHandler((error, _request, reply) => {
   console.log(error)
