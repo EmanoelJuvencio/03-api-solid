@@ -6,7 +6,7 @@ export default <Environment>{
   async setup() {
     console.log('Antes dos testes')
     return {
-      teardown() {
+      async teardown() {
         console.log('Depois dos testes')
       },
     }
